@@ -2,12 +2,13 @@
 //Designed by Marek Jurek
 //////////////////////////////////////////////////
 
-//Edit the parameters below to modify the outer diameter of your tube; 
+//Edit the parameter below to modify the outer diameter of your tube (default: 4mm)
 TubeDiameter=4.0;
-//and length of the guide
-GuideLength=TubeDiameter*10.0;
-// size of the blade opening (default 1mm)
+//Size of the blade opening (default: 1mm)
 BladeOpeningWidth=1.0;
+
+//Length of the guide
+GuideLength=TubeDiameter*10.0;
 // position of the opening from the side of the guide 
 BladeOpeningMargin=TubeDiameter*2;
 
@@ -28,7 +29,7 @@ module guide()
             rotate(a=45, v=[1,0,0]) {
                 cube([GuideLength,GuideHeight,GuideHeight]);
             }
-            // you can visualize tube inside the notch
+            //Uncomment line below if you want to visualize tube inside the notch
             //#tube();
         }
         
